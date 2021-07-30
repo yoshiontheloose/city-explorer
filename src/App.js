@@ -2,8 +2,8 @@ import React from 'react';
 import './App.css';
 
 import './index.js'
-import Form from 'react-bootstrap';
-import Button from 'bootstrap';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 
 
 class App extends React.Component {
@@ -13,15 +13,17 @@ class App extends React.Component {
       cityName: true,
     }
   }
-  
+
   render() {
     return (
       <main>
         <Form>
+          <Form.Group>
           <Form.Label>City Name</Form.Label>
+          <Form.Control></Form.Control>
           <Button>Explore!</Button>
+          </Form.Group>
         </Form>
-
       </main>
     )
   }
