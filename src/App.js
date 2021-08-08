@@ -10,6 +10,8 @@ import Image from 'react-bootstrap/Image';
 import Alert from 'react-bootstrap/Alert';
 import Weather from './Weather.js';
 
+//note: For bootstrap imports, is it better to group them in one import with the brackets{}?
+
 
 class App extends React.Component {
   constructor(props) {
