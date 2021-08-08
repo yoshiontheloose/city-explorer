@@ -3,7 +3,7 @@
 # Project Name
 
 **Author**: Clarissa Pamonicutt
-**Version**: 1.2.0 (increment the patch/fix version number if you make more commits past your first submission)
+**Version**: 1.4.0 (increment the patch/fix version number if you make more commits past your first submission)
 
 ---
 
@@ -22,6 +22,14 @@ As a user, I want clear messages if something goes wrong so I know if I need to 
 As a user of City Explorer, I want to see info about movies related to the city I searched, so that I can learn more about the destination.
 
 Deploy your server. As a user, I want to access the City Explorer application on the web, so that anyone can explore from anywhere
+
+Modularize the back-end codebase.
+
+Refactor: Componentize the front-end codebase.
+
+As a user, I want the application to work with recent results, so that I can see info without the app doing unnecessary API calls.
+
+
 
 <!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
 
@@ -65,6 +73,8 @@ Built using
 ## Change Log
 
 8/4/2021 - Location latitude and longitude displays. Map of the city displays. Error message displays in React Alert component when necessary.
+
+8/7/2021 - An express server is set up for the application with a GET route for weather data. Try and catch methods are set up for weather errors.
 
 <!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an example:
 
@@ -112,7 +122,7 @@ Finish time: 8/7
 
 Actual time needed to complete: 7 hours
 
-![UML](./lab07uml.png)
+![UML](./src/lab07uml.png)
 
 ---
 
@@ -128,4 +138,20 @@ Finish time:
 
 Actual time needed to complete:
 
-![UML](./WRRCLab08.jpg)
+![UML](./src/WRRCLab08.jpg)
+
+# need a description in your readme of what .env variables one needs to create if one was to clone down your repo
+
+---
+
+Name of feature: Lab 09 Refactoring into Modules
+
+Clean up time!
+
+Estimate of time needed to complete: 4 hours
+
+Start time: _____
+
+Finish time: _____
+
+Actual time needed to complete: _____
