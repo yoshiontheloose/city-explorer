@@ -8,6 +8,7 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 import Alert from 'react-bootstrap/Alert';
+import Weather from './Weather.js';
 
 
 class App extends React.Component {
@@ -21,6 +22,7 @@ class App extends React.Component {
       displayMap: false,
       renderError: false,
       errorMessage: '',
+      weather: [],
     }
   }
 
@@ -38,8 +40,32 @@ class App extends React.Component {
         displayMap: true,
       });
 
+      this.getWeather();
+
       //check demo code for error handling, put in bootstrap compt
     } catch (error) {
+      console.log(error.response);
+      this.setState({
+        renderError: true,
+        errorMessage: `Error: ${error.response.status}, Status: ${error.response.data.error}`,
+      });
+    }
+  }
+
+  getWeather = async () => {
+    try {
+      let weather = await axios.get(`http://localhost:3001/weather`, {
+        params: {
+          lat: this.state.lat,
+          lon: this.state.lon,
+          searchQuery: this.state.city,
+        }
+      })
+      this.setState({
+        weather: weather.data,
+      })
+    }
+    catch (error) {
       console.log(error.response);
       this.setState({
         renderError: true,
@@ -51,7 +77,6 @@ class App extends React.Component {
   // event handler for form(city) submission
   handleChange = (event) => {
     this.setState({ city: event.target.value });
-
   }
 
   render() {
@@ -70,7 +95,10 @@ class App extends React.Component {
           <p>{this.state.lon}</p>
           {this.state.displayMap ? <Image src={`https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_LOCATIONIQ_KEY}&center=${this.state.lat},${this.state.lon}&zoom=12`} alt='map' /> : ''}
         </Container>
-        <Alert variant="danger" onClose={() => this.setState({renderError: false})} show={this.state.renderError} dismissible>
+
+        <Weather weather={this.state.weather} />
+
+        <Alert variant="danger" onClose={() => this.setState({ renderError: false })} show={this.state.renderError} dismissible>
           {this.state.errorMessage}
         </Alert>
       </main>
