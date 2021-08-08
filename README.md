@@ -15,6 +15,14 @@ As a user, I want to see a map of the city so that I can see the layout of the a
 
 As a user, I want clear messages if something goes wrong so I know if I need to make any changes or try again in a different manner.
 
+As a user of City Explorer, I want to see weather info for the city I searched, so that I know how to pack for an upcoming trip.
+
+As a user, I want clear messages if something goes wrong so I know if I need to make any changes or try again in a different manner.
+
+As a user of City Explorer, I want to see info about movies related to the city I searched, so that I can learn more about the destination.
+
+Deploy your server. As a user, I want to access the City Explorer application on the web, so that anyone can explore from anywhere
+
 <!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
 
 ---
@@ -72,6 +80,10 @@ Ayrat Gimranov
 
 Vinicio Sanchez
 
+Joe Pennok
+
+JP Jones
+
 ---
 
 Name of feature: Location, map, and error.
@@ -88,4 +100,32 @@ Actual time needed to complete: unknown
 
 ---
 
-<br>
+Name of feature: Lab 07 Custom Servers with Node and Express
+
+Set up server repo, weather, and error code.
+
+Estimate of time needed to complete: 2 days
+
+Start time: 7/31 1/2 hour, 8/4 4 hours, 8/7 2 1/2 hours
+
+Finish time: 8/7
+
+Actual time needed to complete: 7 hours
+
+![UML](./lab07uml.png)
+
+---
+
+Name of feature: Lab 08 APIs.
+
+Add weather API key, add movies, publish
+
+Estimate of time needed to complete: 5 hours
+
+Start time: 8/7
+
+Finish time:
+
+Actual time needed to complete:
+
+![UML](./WRRCLab08.jpg)
