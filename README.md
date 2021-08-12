@@ -38,7 +38,7 @@ As a user, I want the application to work with recent results, so that I can see
 ## Getting Started
 
 ***Important BEFORE merging to GitHub***
-Building an env file
+Building an .env file
 
 - create a new file within the whole project
 - file type is ".env" No additions, that's it.
@@ -53,6 +53,10 @@ Keep your key/token safe!
 Do NOT call your entire key on app files, use the name ONLY!
 
 ***.env MUST BE ADDED TO YOUR .GITIGNORE. JUST .env NOTHING MORE***
+
+Assigning an .env file
+
+- process.env.NAME_OF_API_KEY
 
 <!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
 
@@ -93,6 +97,8 @@ Vinicio Sanchez
 Joe Pennok
 
 JP Jones
+
+David Waiganjo
 
 ---
 
@@ -155,3 +161,18 @@ Start time: _____
 Finish time: _____
 
 Actual time needed to complete: _____
+
+---
+
+Name of feature: Lab 10 Cache external API data in server storage, 
+
+
+Estimate of time needed to complete: 5 hours
+
+Start time: _____
+
+Finish time: _____
+
+Actual time needed to complete: _____
+
+---
