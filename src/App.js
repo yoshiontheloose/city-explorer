@@ -25,6 +25,7 @@ class App extends React.Component {
       renderError: false,
       errorMessage: '',
       weather: [],
+      movies: [],
     }
   }
 
@@ -43,8 +44,9 @@ class App extends React.Component {
       });
 
       this.getWeather();
+      this.getMovies();
 
-      //check demo code for error handling, put in bootstrap compt
+      // error handling
     } catch (error) {
       console.log(error.response);
       this.setState({
@@ -57,6 +59,7 @@ class App extends React.Component {
   getWeather = async () => {
     try {
       let weather = await axios.get(`http://localhost:3001/weather`, {
+// NOTE Question: I had TA help on this part, is this just another way of entering URLs like on line 37 for location and line 82 for movies?
         params: {
           lat: this.state.lat,
           lon: this.state.lon,
@@ -74,6 +77,12 @@ class App extends React.Component {
         errorMessage: `Error: ${error.response.status}, Status: ${error.response.data.error}`,
       });
     }
+  }
+
+  getMovies = async () => {
+    let results = await axios.get(`http://localhost:3001/movies?query=${this.state.city}`);
+
+    console.log(results.data);
   }
 
   // event handler for form(city) submission
